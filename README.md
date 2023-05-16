@@ -31,4 +31,4 @@ Defining MVP (html/css/js designed with accessibility in mind, state management,
 Defining Done (plus user/admin roles, user/game statistics, custom game board/pieces, tournament creation, accessible)
 "Paper Wireframing."
 ```
-# Wireframes here https://github.com/Hack-Weekly/crimson-eagle-FE-game/blob/main/Chesslayout_20230516_0001-1.pdf
+Wireframes here https://github.com/Hack-Weekly/crimson-eagle-FE-game/blob/main/Chesslayout_20230516_0001-1.pdf
