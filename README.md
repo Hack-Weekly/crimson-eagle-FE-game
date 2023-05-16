@@ -29,5 +29,6 @@ Done/Review (these be finalized by 8pm 05/17/2023 USA) unless recommendations/su
 "back-end stack"
 Defining MVP (html/css/js designed with accessibility in mind, state management, works with no accessibility)
 Defining Done (plus user/admin roles, user/game statistics, custom game board/pieces, tournament creation, accessible)
-"FE team is wireframing with paper."
+"Paper Wireframing."
 ```
+# Wireframes here https://github.com/Hack-Weekly/crimson-eagle-FE-game/blob/main/Chesslayout_20230516_0001-1.pdf
