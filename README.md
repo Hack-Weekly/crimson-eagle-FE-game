@@ -25,7 +25,6 @@ Currently Doing
 Done/Review (these be finalized by 8pm 05/17/2023 USA) unless recommendations/suggestions/concerns received
 ```
 "create user, admin stories"
-------> unless someone wants to add/remove the stories (what users/admin want to do on the site) or separate them into MVP and Done. I think this is something we can take off of our plate.
 "back-end stack"
 Defining MVP (html/css/js designed with accessibility in mind, state management, works with no accessibility)
 Defining Done (plus user/admin roles, user/game statistics, custom game board/pieces, tournament creation, accessible)
