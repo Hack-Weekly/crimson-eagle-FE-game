@@ -1,0 +1,77 @@
+https://www.dailychess.com/chess/chess-fen-viewer.php?isficsherstart=1&callbacktitle=&callbacklabel=&callbackurl=
+
+qrknbbnr/pppppppp/8/8/8/8/PPPPPPPP/QRKNBBNR w - - 0 1
+
+convert this to 3d array
+
+8*8
+
+3d array
+
+[ [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
+  [ 'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p' ],
+  [ '' , '' , '' , '' , '' , '' , '' , ''  ],
+  [ '' , '' , '' , '' , '' , '' , '' , ''  ],
+  [ '' , '' , '' , '' , '' , '' , '' , ''  ],
+  [ '' , '' , '' , '' , '' , '' , '' , ''  ],
+  [ 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' ],
+  [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ] ]
+
+chessPiece Moves
+
+calculate grid coordinate and determine if and 
+
+	A. takeAction = determine if 
+		- if occupied:
+			- not the same color/team
+			- set action = yes
+
+* Pawn:
+	1. one space north of piece is free
+	2. one space to east and one space north is occupied
+
+* knights:
+	1. two spaces in north is free and one space to east
+	2. two spaces in north is free and one space to west
+
+	3. two spaces in south is free and one space to east
+	4. two spaces in south is free and one space to west
+
+	5. two spaces to west is free and one space to north
+	6. two spaces in west is free and one space to south
+
+	7. two spaces to east is free and one space to north
+	8. two spaces in east is free and one space to south
+
+* Rook:
+	1. determine how many spaces north is free
+	2. determine how many spaces south is free
+	3. determine how many spaces east is free
+	4. determine how many spaces west is free
+
+* Bishop:
+	1. determine how many of this pattern (one space north and one space east)
+	2. determine how many of this pattern (one space north and one space west)
+	3. determine how many of this pattern (one space south and one space east)
+	4. determine how many of this pattern (one space north and one space west)
+
+* King:
+	1. one space north of piece is free
+	2. one space west of piece is free
+	3. one space east of piece is free
+	4. one space south of piece is free
+
+* Queen:
+	1. determine how many of this pattern (one space north and one space east)
+	2. determine how many of this pattern (one space north and one space west)
+	3. determine how many of this pattern (one space south and one space east)
+	4. determine how many of this pattern (one space north and one space west)
+
+	1. determine how many spaces north is free
+	2. determine how many spaces south is free
+	3. determine how many spaces east is free
+	4. determine how many spaces west is free
+
+function moveValidator(chessPiece obj) {
+	pieceInFront 
+{
