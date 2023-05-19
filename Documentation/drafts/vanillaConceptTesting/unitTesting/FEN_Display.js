@@ -19,6 +19,8 @@ const FEN_Display = {
 
         } else if (UnitTestGenerator.$.Color === "green") {
 
+            FEN_Display.$.displayedFEN = FEN_Display.$.GivenFEN;
+
             console.log("Namespace: FEN_Display\n \ndisplayedFEN_Equals_GivenFEN success \n \n GivenFEN = " + FEN_Display.$.GivenFEN + " \n \n displayedFEN = " + FEN_Display.$.displayedFEN)
 
         }    
