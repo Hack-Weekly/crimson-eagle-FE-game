@@ -15,8 +15,9 @@ type Game = {
     secondsLeft: number,
 }
 
+const storagekey = 'crimson-eagle-chess-game'
 const readGame = (): Game | null => {
-    const gameJson = localStorage.getItem('crimson-eagle-chess-game')
+    const gameJson = localStorage.getItem(storagekey)
 
     if (gameJson) {
         const { game } = JSON.parse(gameJson)
@@ -37,21 +38,27 @@ const gameState = proxy<GameState>({
 
 const storeGame = () => {
     if (gameState.game) {
-        localStorage.setItem('crimson-eagle-chess-game', JSON.stringify({
+        localStorage.setItem(storagekey, JSON.stringify({
             game: gameState.game,
         }))
+    } else {
+        localStorage.removeItem(storagekey)
     }
 }
 
-const fetchGame = async (): Promise<Game | null> => {
+const fetchGame = async (): Promise<void> => {
     return fetch('https://lichess.org/api/account/playing')
         .then(res => res.json())
-        .then(data => data.nowPlaying[0])
+        .then(data => data.nowPlaying[0] ? data.nowPlaying[0] : null)
+        .then(game => {
+            gameState.game = game
+            storeGame()
+        })
 }
 
 export type UseGameState = {
     state: GameState,
-    fetchGame: () => Promise<Game | null>,
+    fetchGame: () => Promise<void>,
     storeGame: () => void,
 }
 const useGameState = (): UseGameState => ({
