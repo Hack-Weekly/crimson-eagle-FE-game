@@ -1,6 +1,6 @@
 const UnitTestGenerator = {
     $: {
-        Color: "red",
+        Color: "green",
     },
 
     init() {
