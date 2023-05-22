@@ -1,5 +1,16 @@
-import { SignUp } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs/app-beta";
 
-export default function Page() {
-  return <SignUp />;
+
+const Page = async () => {
+  return (
+    <section className='py-24'>
+      <div className='container'>
+        <div className='flex justify center'>
+          <SignUp afterSignInUrl="/game-type" />
+        </div>
+      </div>
+    </section>
+  )
 }
+
+export default Page
