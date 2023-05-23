@@ -23,6 +23,7 @@ function RootLayout({
 }) {
   return (
     <html 
+    data-theme="dark"
       lang='en'
       className={`${inter.className} h-full scroll-smooth antialiased container`}
     >
