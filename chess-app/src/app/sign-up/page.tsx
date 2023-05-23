@@ -1,5 +1,7 @@
 import { SignUp } from "@clerk/nextjs";
 
-export default function Page() {
-  return <SignUp />;
-}
+const SignUpPage = () => (
+  <SignUp path="/sign-in" routing="path" redirectUrl="game-type" />
+  );
+
+export default SignUpPage;
