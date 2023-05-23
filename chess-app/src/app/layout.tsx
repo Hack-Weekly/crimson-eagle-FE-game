@@ -22,7 +22,7 @@ function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
+    <html 
       lang='en'
       className={`${inter.className} h-full scroll-smooth antialiased container`}
     >

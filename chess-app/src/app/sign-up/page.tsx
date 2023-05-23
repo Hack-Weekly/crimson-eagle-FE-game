@@ -1,16 +1,7 @@
-import { SignUp } from "@clerk/nextjs/app-beta";
+import { SignUp } from "@clerk/nextjs";
 
+const SignUpPage = () => (
+  <SignUp path="/sign-in" routing="path" redirectUrl="game-type" />
+  );
 
-const Page = async () => {
-  return (
-    <section className='py-24'>
-      <div className='container'>
-        <div className='flex justify center'>
-          <SignUp afterSignInUrl="/game-type" />
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export default Page
+export default SignUpPage;

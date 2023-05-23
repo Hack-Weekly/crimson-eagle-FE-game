@@ -3,7 +3,7 @@ import { Chessboard } from "react-chessboard";
 
 export default function Page() {
   return (
-    <div>
+    <div className="min-h-screen bg-base-200">
       <Chessboard id="BasicBoard" />
     </div>
   );
