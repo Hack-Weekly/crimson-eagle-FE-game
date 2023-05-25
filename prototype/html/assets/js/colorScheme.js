@@ -56,9 +56,9 @@ backgroundColorPicker.addEventListener('change', () => {
 	backgroundColor = backgroundColorPicker.value;
 });
 
-texturePicker.addEventListener('change', () => {
-	texture = texturePicker.value;
-});
+// texturePicker.addEventListener('change', () => {
+// 	texture = texturePicker.value;
+// });
 
 const colorScheme = {
 	bgLightColor,
@@ -66,5 +66,5 @@ const colorScheme = {
 	pieceLightColor,
 	pieceDarkColor,
 	backgroundColor,
-	texture,
+	//texture,
 };
