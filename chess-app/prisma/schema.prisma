@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Player {
+  id            Int       @id @default(autoincrement())
+  clerkId       String    @unique
+  username      String
+  rating        Int       @default(0)
+  games         PlayersInGames[]
+}
+
+model Game {
+  id            Int       @id @default(autoincrement())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  players       PlayersInGames[]
+  fen           String    @default("")
+  pgn           String    @default("")
+  isFinished    Boolean   @default(false)
+}
+
+model PlayersInGames {
+  game          Game      @relation(fields: [gameId], references: [id])
+  gameId        Int
+  player        Player    @relation(fields: [playerId], references: [id])
+  playerId      Int
+  color         String
+
+  @@id([gameId, playerId])
+}
