@@ -14,7 +14,8 @@ export default async function Page() {
         <div className="btn btn-active grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">Computer</div>
         </div>
         <br/>
-        <Link href="/chess" className="flex justify-center items-center underline">Click to Begin</Link>
+        <Link href="/chess" className="flex justify-center items-center underline">Click Begin</Link>
+        <a href="/statistics" className= "btn btn-primary">Statistics</a>
       </div>
     )
   }
