@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Color Customizer</title>
+		<link rel="stylesheet" href="./assets/css/customColor.css" />
+	</head>
+	<body>
+		<button class="open-button" id="open-button">Customize Board</button>
+		<div class="container hidden">
+			<div class="color-container">
+				<button class="close-button" id="close-button">close</button>
+
+				<h1>Color Customizer</h1>
+				<p>Pick the color of the light squares</p>
+				<input
+					type="color"
+					class="color-picker"
+					id="bg-light-colorpicker"
+					value="#fffff0"
+				/>
+				<p>Pick the color of the dark squares</p>
+				<input
+					type="color"
+					class="color-picker"
+					id="bg-dark-colorpicker"
+					value="#773f1a"
+				/>
+				<p>Pick the color of the light pieces</p>
+				<input
+					type="color"
+					class="color-picker"
+					id="piece-light-colorpicker"
+					value="#f2d9c4"
+				/>
+				<p>Pick the color of the dark pieces</p>
+				<input
+					type="color"
+					class="color-picker"
+					id="piece-dark-colorpicker"
+					value="#000000"
+				/>
+				<p>Pick the color of the background</p>
+				<input
+					type="color"
+					class="color-picker"
+					id="background-colorpicker"
+					value="#885e42"
+				/>
+				<!-- <div class="texture-picker">
+					<p>Pick the texture of the board</p>
+					<select id="texture-select" class="texture-dropdown">
+						<option value="none">None</option>
+						<option value="wood">Wood</option>
+						<option value="marble">Marble</option>
+						<option value="stone">Stone</option>
+					</select>
+				</div> -->
+			</div>
+		</div>
+	</body>
+	<script src="./assets/js/colorScheme.js"></script>
+</html>
