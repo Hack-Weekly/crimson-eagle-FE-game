@@ -15,7 +15,7 @@ export default async function Page() {
         </div>
         <br/>
         <Link href="/chess" className="flex justify-center items-center underline">Click Begin</Link>
-        <a href="/statistics" className= "btn btn-primary">Statistics</a>
+        <a href="/statistics" className= "btn btn-outline">Statistics</a>
       </div>
     )
   }
