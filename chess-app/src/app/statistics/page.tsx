@@ -31,11 +31,11 @@ export default async function Statistics() {
     if (!user) return (<div>Not Logged In</div>)
 
   return(
-    
+    //on line 38 with the fdiv class=text-justify, we need to vetically allign the text to the center but I am to tired to do it rn
   <div className="min-h-screen bg-base-200 justify-center">
   <a href="/game-type" className= "btn btn-outline">Back</a>
   <div className="flow-root"> 
-  <div className="flex justify-center"> <img width="25" height="25" src={user?.profileImageUrl}></img>{user?.firstName}</div>
+  <div className="flex justify-center"><img style={{'borderRadius':'50%'}} width="40" height="40" src={user?.profileImageUrl}></img><div className="flex text-justify" >{user?.firstName}</div></div>
     <div className="float-left">  
     <div>Total Games:{totalGames}</div>
     <div>
