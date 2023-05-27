@@ -15,6 +15,9 @@ let pieceDarkColor = pieceDarkColorPicker.input;
 const backgroundColorPicker = document.getElementById('background-colorpicker');
 let backgroundColor = backgroundColorPicker.input;
 
+const borderColorPicker = document.getElementById('border-colorpicker');
+let borderColor = borderColorPicker.input;
+
 // const texturePicker = document.getElementById('texture-select');
 // let texture = texturePicker.input;
 
@@ -66,5 +69,6 @@ const colorScheme = {
 	pieceLightColor,
 	pieceDarkColor,
 	backgroundColor,
-	texture,
+	borderColor,
+	//texture,
 };

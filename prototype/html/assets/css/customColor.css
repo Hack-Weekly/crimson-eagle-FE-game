@@ -36,6 +36,24 @@
 	color: white;
 }
 
+.open-button:hover {
+	background-color: rgb(50, 50, 172);
+	color: white;
+	cursor: pointer;
+}
+
+.open-button:active {
+	transform: scale(0.95);
+}
+
+.close-button:hover {
+	cursor: pointer;
+}
+
+.close-button:active {
+	transform: scale(0.95);
+}
+
 .container.hidden {
 	opacity: 0%;
 	transition: 0.3s;
@@ -54,21 +72,6 @@
 	height: 100%;
 	width: 100%;
 	width: 300px;
-}
-
-#bg-light {
-}
-
-#bg-dark {
-}
-
-#background-color {
-}
-
-#piece-color {
-}
-
-#dark-piece-color {
 }
 
 .color-picker {
