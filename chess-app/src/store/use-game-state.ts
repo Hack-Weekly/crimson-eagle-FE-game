@@ -1,19 +1,5 @@
 import { proxy, useSnapshot } from 'valtio'
-
-type Game = {
-    gameId: string,
-    color: 'black' | 'white',
-    fen: string, // ex: 'r1bqkbnr/pppp2pp/2n1pp2/8/8/3PP3/PPPB1PPP/RN1QKBNR w KQkq - 2 4',
-    hasMoved: boolean,
-    isMyTurn: boolean,
-    lastMove: string // ex: 'b8c6',
-    opponent: {
-        id: string,
-        username: string,
-        rating: number,
-    },
-    secondsLeft: number,
-}
+import type { Game } from '../types/game'
 
 const storagekey = 'crimson-eagle-chess-game'
 const readGame = (): Game | null => {
@@ -62,7 +48,7 @@ export type UseGameState = {
     storeGame: () => void,
 }
 const useGameState = (): UseGameState => ({
-    state: useSnapshot(gameState),
+    state: useSnapshot(gameState) as GameState,
     fetchGame,
     storeGame,
 })
