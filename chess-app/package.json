@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"test": "jest --watch"
+		"test": "jest --watch",
+		"seed": "node prisma/seed.ts"
 	},
 	"dependencies": {
 		"@clerk/nextjs": "^4.18.2",

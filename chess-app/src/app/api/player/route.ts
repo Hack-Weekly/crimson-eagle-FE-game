@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/db'
 
 export const GET = async () => {
+
     return prisma.player.findMany({
         orderBy: {
             username: 'desc',
@@ -10,12 +11,6 @@ export const GET = async () => {
             games: true,
         },
     })
-    .then(players => NextResponse.json({
-        data: players,
-    }))
-    .catch(_ => NextResponse.json({
-        message: 'An error occured in the database',
-    }, {
-        status: 500,
-    }))
+    .then(NextResponse.json)
+    .catch(() => NextResponse.json({ message: 'An error occured in the database' }, { status: 500 }))
 }

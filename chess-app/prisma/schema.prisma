@@ -34,6 +34,7 @@ model PlayersInGames {
   player        Player    @relation(fields: [playerId], references: [id])
   playerId      Int
   color         String
+  result        String?
 
   @@id([gameId, playerId])
 }
