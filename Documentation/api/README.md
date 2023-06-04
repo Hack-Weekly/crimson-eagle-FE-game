@@ -13,7 +13,7 @@ Response example:
     "createdAt": "2023-05-28T12:59:27.282Z",
     "updatedAt": "2023-05-28T12:59:27.282Z",
     "fen": "2k1rb1r/ppp2p1p/3p4/3n1b2/5BpP/3N4/KP1N2P1/3R1B1R w - - 0 17",
-    "pgn": "1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 Nf6 6. d4 d6\
+    "pgn": "1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 Nf6 6. d4 d6\n
     7. Nd3 Nxe4 8. Bxf4 Qe7 9. Qe2 Nc6 10. c3 Bf5 11. Nd2 O-O-O\n
     12. O-O-O Re8 13. d5 Nxc3 14. Qxe7 Nxa2+ 15. Kb1 Nxe7 16. Kxa2\n
     Nxd5 0-1",
@@ -100,7 +100,7 @@ Response example:
     "createdAt": "2023-05-28T12:59:27.282Z",
     "updatedAt": "2023-05-28T12:59:27.282Z",
     "fen": "2k1rb1r/ppp2p1p/3p4/3n1b2/5BpP/3N4/KP1N2P1/3R1B1R w - - 0 17",
-    "pgn": "1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 Nf6 6. d4 d6\
+    "pgn": "1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 Nf6 6. d4 d6\n
     7. Nd3 Nxe4 8. Bxf4 Qe7 9. Qe2 Nc6 10. c3 Bf5 11. Nd2 O-O-O\n
     12. O-O-O Re8 13. d5 Nxc3 14. Qxe7 Nxa2+ 15. Kb1 Nxe7 16. Kxa2\n
     Nxd5 0-1",
@@ -135,6 +135,45 @@ Response example:
 ```
 
 ### PUT /api/game/[ID]
+
+Save a game identified by ID.
+Body:
+
+```ts
+{
+	fen: string,
+	pgn: string,
+}
+```
+
+Response example:
+
+```json
+{
+	"id": 5,
+	"createdAt": "2023-05-28T16:09:44.690Z",
+	"updatedAt": "2023-05-28T16:13:37.439Z",
+	"fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+	"pgn": "1. d4",
+	"isFinished": false,
+	"players": [
+		{
+			"gameId": 5,
+			"playerId": 1,
+			"color": "b",
+			"result": null,
+			"player": {
+				"id": 1,
+				"clerkId": "johndoe",
+				"username": "johndoe",
+				"rating": 0
+			}
+		}
+	]
+}
+```
+
+### POST /api/game/[ID]/move
 
 Make a move in a game identified by ID.
 Body:
